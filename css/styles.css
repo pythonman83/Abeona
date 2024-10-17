@@ -1,0 +1,858 @@
+/************** Styles généraux du site (corps de la page). *******************/
+body {
+    /* Police par défaut pour tout le site */
+    font-family: 'Arial', sans-serif;
+    /* Couleur de fond claire */
+    background-color: #B0E0E6;
+    /* Couleur principale du texte */
+    color: #333;
+}
+/************** Styles généraux du site (corps de la page). *******************/
+
+
+
+/******************** Styles pour les titres h2 ******************************/
+h2 {
+    /* Texte en gras */
+    font-weight: bold;
+    /* Espacement en bas */
+    margin-bottom: 20px;
+    /* Couleur spécifique */
+    color: #2c3e50;
+}
+/******************** Styles pour les titres h2 ******************************/
+
+
+
+
+/******************* Styles pour la barre de navigation *********************/
+.navbar {
+    /* Couleur de fond bleu */
+    background-color: #34495e !important;
+    /* Espacement interne */
+    padding: 15px 20px;
+    /* Ombre légère */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour la marque (logo) dans la barre de navigation */
+.navbar-brand {
+    /* Taille de la police pour la marque */
+    font-size: 1.5rem;
+    /* Poids de la police en gras */
+    font-weight: bold;
+    /* Couleur du texte en noir, avec !important pour forcer l'application */
+    color: #000 !important;
+}
+
+/* Style pour les liens dans la barre de navigation */
+.navbar-nav .nav-link {
+    /* Couleur du texte en noir, avec !important pour forcer l'application */
+    color: #fff !important;
+    font-weight: bold;
+    /* Taille de la police d'écriture */
+    font-size: 1.3rem;
+}
+
+/* Style pour du lien 'Accueil' dans la barre de navigation */
+.navbar-nav .nav-link.active {
+    /* Couleur du texte en noir, avec !important pour forcer l'application */
+    color: #e74c3c !important;
+    font-weight: bold;
+    /* Taille de la police d'écriture */
+    font-size: 1.3rem;
+}
+
+/* Style pour les liens dans la barre de navigation au survol */
+.navbar-nav .nav-link:hover {
+    /* Couleur du texte en noir, avec !important pour forcer l'application */
+    color: #e74c3c !important;
+    
+}
+
+/* Style personnalisé pour le menu déroulant */
+.custom-dropdown-menu {
+    border-radius: 10px; /* Bordures arrondies pour adoucir les angles du menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet de profondeur du menu */
+    overflow: hidden; /* Empêche le contenu de déborder du menu */
+  }
+  
+  /* Style personnalisé pour les éléments du menu déroulant */
+  .custom-dropdown-item {
+    font-size: 1.25rem; /* Taille de la police pour les éléments du menu */
+    padding: 10px 20px; /* Espacement interne pour les éléments du menu pour améliorer la lisibilité */
+    transition: background-color 0.3s, color 0.3s; /* Transition pour le changement de couleur de fond et du texte au survol */
+  }
+  
+  /* Effet de survol pour les éléments du menu déroulant */
+  .custom-dropdown-item:hover {
+    background-color: #ff7e5f; /* Change la couleur de fond de l'élément au survol */
+    color: #fff; /* Change la couleur du texte à blanc au survol */
+  }
+
+/* Style pour le bouton du menu hamburger sur les petits écrans */
+.navbar-toggler {
+    /* Couleur de la bordure du bouton en blanc */
+    border-color: #fff;
+    color: #fff !important;
+}
+
+/* Style pour l'effet de zoom sur les images, en particulier ici sur le logo */
+.img-zoom {
+    /* Transition douce pour l'effet de transformation */
+    transition: transform 0.3s ease;
+}
+/* Style pour l'effet de zoom au survol */
+.img-zoom:hover {
+    /* Agrandissement de l'image de 10% au survol */
+    transform: scale(1.2);
+}
+
+/* Style pour le badge (utilisé pour les notifications) */
+.badge {
+    /* Couleur de fond du badge en rouge */
+    background-color: #e74c3c;
+}
+/* Cette classe définit le style du badge circulaire */
+.badge-circle {
+    /* Permet de positionner des éléments enfants par rapport à ce badge */
+    position: relative;
+    /* Affiche le badge en ligne avec le texte tout en permettant de définir ses dimensions */
+    display: inline-flex;
+    /* Centre horizontalement le contenu du badge */
+    justify-content: center;
+    /* Centre verticalement le contenu du badge */
+    align-items: center;
+    /* Définit la largeur du badge à 38 pixels */
+    width: 38px;
+    /* Définit la hauteur du badge à 38 pixels */
+    height: 38px;
+    /* Rend le badge parfaitement circulaire */
+    border-radius: 50%;
+    /* Définit la taille du texte à l'intérieur du badge à 20 pixels */
+    font-size: 1.25rem;
+    /* Rend le texte en gras */
+    font-weight: bold;
+    /* Définit la couleur du texte en blanc */
+    color: white;
+}
+
+/* Ce sélecteur crée un pseudo-élément pour ajouter un contour au badge */
+.badge-circle::before {
+    /* Nécessaire pour que le pseudo-élément s'affiche, même s'il est vide */
+    content: '';
+    /* Positionne le pseudo-élément par rapport au badge */
+    position: absolute;
+    /* Place le bord supérieur du contour 2 pixels au-dessus du badge */
+    top: -2px;
+    /* Place le bord gauche du contour 2 pixels à gauche du badge */
+    left: -2px;
+    /* Place le bord droit du contour 2 pixels à droite du badge */
+    right: -2px;
+    /* Place le bord inférieur du contour 2 pixels en dessous du badge */
+    bottom: -2px;
+    /* Rend le contour parfaitement circulaire */
+    border-radius: 50%;
+    /* Crée une bordure blanche de 3 pixels d'épaisseur autour du badge */
+    border: 3px solid white;
+}
+/* '.badge-circle' est le parent qui définit le badge principal, 
+    tandis que ::before est l'enfant qui crée le contour autour de ce badge. 
+    Cette structure permet de créer un effet visuel complexe (un badge avec un contour) 
+    en utilisant un seul élément HTML avec des styles CSS avancés. */
+/******************* Styles pour la barre de navigation *********************/
+
+
+
+
+/******************* Styles pour le carrousel *****************************/
+/* Définit la hauteur des éléments du carrousel */
+.carousel-item {
+    /* Hauteur fixe de 500 pixels */
+    height: 500px;
+}
+/* Style pour les images dans les éléments du carrousel */
+.carousel-item img {
+    /* Assombrit l'image à 70% de sa luminosité originale */
+    filter: brightness(70%);
+    /* Ajuste l'image pour couvrir tout l'espace disponible */
+    object-fit: cover;
+    /* Hauteur à 100% de l'élément parent */
+    height: 100%;
+    /* Largeur à 100% de l'élément parent */
+    width: 100%;
+}
+
+/* Style pour la légende du carrousel */
+.carousel-caption {
+    /* Positionnement absolu par rapport à l'élément parent */
+    position: absolute;
+    /* Positionne le haut de la légende à 50% de la hauteur du parent */
+    top: 50%;
+    /* Déplace la légende vers le haut de 60% de sa propre hauteur */
+    transform: translateY(-60%);
+    /* Centre le texte horizontalement */
+    text-align: center;
+    /* Définit la largeur à 70% de l'élément parent */
+    width: 70%;
+    /* Fond semi-transparent noir */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Espacement interne de 20 pixels */
+    padding: 20px;
+    /* Coins arrondis de 10 pixels */
+    border-radius: 10px;
+}
+
+/* Style pour le titre h5 dans la légende du carrousel */
+.carousel-caption h5 {
+    /* Taille de police de 2rem */
+    font-size: 2rem;
+    /* Texte en gras */
+    font-weight: bold;
+    /* Ombre portée pour améliorer la lisibilité */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Couleur du texte en blanc */
+    color: #fff;
+}
+
+/* Style pour le paragraphe dans la légende du carrousel */
+.carousel-caption p {
+    /* Taille de police de 1.25rem */
+    font-size: 1.25rem;
+    /* Ombre portée légère pour améliorer la lisibilité */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    /* Couleur du texte légèrement grisée */
+    color: #ecf0f1;
+}
+
+/* Style pour le bouton dans la légende du carrousel */
+.carousel-caption .btn {
+    /* Taille de police de 1rem */
+    font-size: 1.25rem;
+    /* Espacement interne du bouton */
+    padding: 10px 20px;
+    /* Couleur de fond du bouton */
+    background-color: #e74c3c;
+    /* Supprime la bordure du bouton */
+    border: none;
+    
+    
+}
+
+
+
+/* Style pour les boutons de contrôle précédent et suivant du carrousel */
+.carousel-control-prev, .carousel-control-next {
+    /* Fond semi-transparent noir */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Forme circulaire */
+    border-radius: 50%;
+    /* Largeur de 40 pixels */
+    width: 40px;
+    /* Hauteur de 40 pixels */
+    height: 40px;
+    /* Positionne le haut du bouton à 50% de la hauteur du parent */
+    top: 50%;
+    /* Centre verticalement le bouton */
+    transform: translateY(-50%);
+}
+/* Style pour les icônes des boutons de contrôle */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    /* Largeur de 20 pixels */
+    width: 20px;
+    /* Hauteur de 20 pixels */
+    height: 20px;
+}
+/******************* Styles pour le carrousel *****************************/
+
+
+
+/********************* CSS pour le formulaire multi-étapes de la page *******************/
+/* Style pour le formulaire multi-étapes */
+#multiStepForm {
+    /* Couleur du texte en noir */
+    color: #000;
+    /* Texte en gras */
+    font-weight: bold;
+    /* Arrière-plan avec un dégradé en diagonale de deux couleurs */
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Dégradé de couleurs époustouflant */
+    /* Ajoute une bordure bleue de 4 pixels */
+    border: 4px solid #3498db;
+    /* Coins arrondis de 10px */
+    border-radius: 10px;
+    /* Espacement interne de 20px */
+    padding: 20px;
+    /* Ombre portée légère */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Transition douce pour la transformation et l'ombre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Style au survol du formulaire multi-étapes */
+#multiStepForm:hover {
+    /* Déplace le formulaire vers le haut de 5px */
+    transform: translateY(-5px);
+    /* Ombre portée plus prononcée au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Style pour les champs de formulaire */
+.form-control {
+    /* Bordure solide bleue de 2px */
+    border: 2px solid #3498db;
+    /* Espacement interne de 10px */
+    padding: 10px;
+    /* Taille de police de 1rem */
+    font-size: 1rem;
+    /* Transition douce pour la couleur de la bordure */
+    transition: border-color 0.3s ease;
+}
+/* Style des champs de formulaire lors du focus */
+.form-control:focus {
+    /* Changement de la couleur de bordure au focus */
+    border-color: #e74c3c;
+    /* Suppression de l'ombre par défaut au focus */
+    box-shadow: none;
+}
+
+/* Style commun pour les boutons primaires, de succès et secondaires */
+.btn-primary, .btn-success, .btn-secondary {
+    /* Espacement interne des boutons */
+    padding: 10px 20px;
+    /* Taille de police de 1rem */
+    font-size: 1rem;
+    /* Suppression de la bordure */
+    border: none;
+    /* Couleur du texte en noir */
+    color: #000;
+    /* Texte en gras */
+    font-weight: bold;
+    /* Transition douce pour la couleur de fond */
+    transition: background-color 1.3s ease;
+}
+
+/* Couleur de fond pour le bouton primaire */
+.btn-primary { background-color: #3498db; }
+/* Couleur de fond au survol du bouton primaire */
+.btn-primary:hover { background-color: #2980b9; transition: background-color 1.3s ease; }
+/* Couleur de fond pour le bouton de succès */
+.btn-success { background-color: #2ecc71;}
+/* Couleur de fond au survol du bouton de succès */
+.btn-success:hover { background-color: #27ae60; transition: background-color 1.3s ease; }
+/* Couleur de fond pour le bouton secondaire */
+.btn-secondary { background-color: #95a5a6; }
+/* Couleur de fond au survol du bouton secondaire */
+.btn-secondary:hover { background-color: #7f8c8d; transition: background-color 1.3s ease;}
+
+/********************* CSS pour le formulaire multi-étapes de la page *******************/
+
+
+
+/********************* CSS pour les coordonnées de l'entreprise ***********************************************/
+/* Conteneur principal pour la boîte des informations de contact */
+.contact-info-box {
+    /* Arrière-plan avec un dégradé en diagonale de deux couleurs */
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Dégradé de couleurs époustouflant */
+    /* Couleur du texte en blanc */
+    color: white;
+    /* Bords arrondis */
+    border-radius: 15px;
+    /* Ajoute une bordure bleue de 4 pixels */
+    border: 4px solid #3498db;
+    /* Espace intérieur de 20px autour du contenu */
+    padding: 20px;
+    /* Marge supérieure pour espacer la boîte des autres éléments */
+    margin-top: 30px;
+    /* Ombre appliquée autour du conteneur pour un effet de profondeur */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre douce pour un effet 3D */
+    /* Alignement du texte au centre */
+    text-align: center;
+    /* Transition douce lors des effets de survol */
+    transition: transform 0.3s ease-in-out; /* Animation douce au survol */
+}
+
+/* Effet de survol pour la boîte de contact */
+.contact-info-box:hover {
+    /* Légère montée de la boîte au survol */
+    transform: translateY(-5px); /* Légère montée au survol */
+    /* Ombre portée plus prononcée au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* Style pour les titres dans la boîte de contact */
+.contact-info-box h3 {
+    /* Taille de la police pour les titres */
+    font-size: 1.8rem;
+    /* Marge inférieure pour espacer le titre des autres éléments */
+    margin-bottom: 15px;
+    /* Gras pour le texte */
+    font-weight: bold;
+    /* Couleur du texte */
+    color: #000;
+}
+
+/* Style pour les paragraphes dans la boîte de contact */
+.contact-info-box p {
+    /* Taille de la police pour les paragraphes */
+    font-size: 1.2rem;
+    /* Marge intérieure pour espacer les paragraphes verticalement */
+    margin: 10px 0;
+    /* Utilisation de Flexbox pour centrer les éléments horizontalement et verticalement */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style pour les icônes dans les paragraphes */
+.contact-info-box p i {
+    /* Espace entre l'icône et le texte */
+    margin-right: 10px;
+    /* Couleur des icônes */
+    color: #ffeb3b; /* Couleur des icônes */
+    /* Taille de la police pour les icônes */
+    font-size: 1.5rem;
+}
+
+
+/* Responsivité pour les écrans de taille maximale de 768px */
+@media (max-width: 768px) {
+    /* Réduction de la taille du texte pour les titres dans la boîte de contact */
+    .contact-info-box h3 {
+        font-size: 1.6rem;
+    }
+    /* Réduction de la taille du texte pour les paragraphes */
+    .contact-info-box p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsivité pour les écrans de taille maximale de 576px */
+@media (max-width: 576px) {
+    /* Réduction de l'espace intérieur de la boîte pour les petits écrans */
+    .contact-info-box {
+        padding: 15px;
+    }
+    /* Réduction de la taille du texte pour les titres */
+    .contact-info-box h3 {
+        font-size: 1.4rem;
+    }
+    /* Réduction de la taille du texte pour les paragraphes */
+    .contact-info-box p {
+        font-size: 0.9rem;
+    }
+}
+/********************* CSS pour les coordonnées de l'entreprise ***********************************************/
+
+
+
+/******************** Styles pour l'iframe de la carte intégrée ************************/
+/* Styles pour le conteneur de la carte */
+.carte-map {
+    /* Ajoute une bordure bleue de 4 pixels */
+    border: 4px solid #3498db;
+    /* Arrondit les coins de la bordure */
+    border-radius: 8px;
+    /* Ombre appliquée autour du conteneur pour un effet de profondeur */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre douce pour un effet 3D */
+    /* Ajoute un espacement interne */
+    padding: 20px;
+    /* Arrière-plan avec un dégradé en diagonale de deux couleurs */
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Dégradé de couleurs époustouflant */
+    /* Ligne vide pour la lisibilité */
+    /* Transition douce lors des effets de survol */
+    transition: transform 0.3s ease-in-out; /* Animation douce au survol */
+}
+
+/* Effet de survol pour la boîte de contact */
+.carte-map:hover {
+    /* Légère montée de la boîte au survol */
+    transform: translateY(-5px); /* Légère montée au survol */
+    /* Ombre portée plus prononcée au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+  
+/* Styles pour le conteneur de l'iframe */
+#map {
+    /* Positionne l'élément de manière relative */
+    position: relative;
+    /* Définit un ratio d'aspect 16:9 */
+    padding-bottom: 56.25%; /* Ratio 16:9 pour un affichage responsive */
+    /* Réinitialise la hauteur */
+    height: 0;
+    /* Cache le contenu qui dépasse */
+    overflow: hidden;
+}
+  
+/* Styles pour l'iframe de la carte */
+#map iframe {
+    /* Positionne l'iframe de manière absolue par rapport à son parent */
+    position: absolute;
+    /* Aligne l'iframe en haut du conteneur */
+    top: 0;
+    /* Aligne l'iframe à gauche du conteneur */
+    left: 0;
+    /* Fait occuper toute la largeur du conteneur */
+    width: 100%;
+    /* Fait occuper toute la hauteur du conteneur */
+    height: 100%;
+    /* Supprime la bordure par défaut de l'iframe */
+    border: none;
+}
+/******************** Styles pour l'iframe de la carte intégrée ************************/
+
+
+
+/****************** Responsive design pour le formulaire et la carte maps sut petits écrans ******************/
+@media (max-width: 767px) {
+    .col-md-6 {
+      margin-bottom: 20px; /* Augmente l'espace entre les colonnes sur petits écrans */
+    }
+  
+    #multiStepForm {
+      margin-bottom: 20px; /* Augmente l'espace sous le formulaire sur petits écrans */
+    }
+  
+    .carte-map {
+      margin-top: 10px; /* Augmente l'espace au-dessus de la carte sur petits écrans */
+    }
+  
+    /* Ajoute un séparateur visuel entre le formulaire et la carte */
+    .carte-map::before {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: #e0e0e0;
+      margin: 20px 0;
+    }
+  }
+/****************** Responsive design pour le formulaire et la carte maps sut petits écrans ******************/
+
+
+
+
+/************* Styles pour le pied de page contenant un texte et des icônes de réseaux sociaux **************/
+footer {
+    /* Couleur de fond du pied de page */
+    background-color: #34495e;
+    /* Couleur du texte en blanc */
+    color: #fff;
+    /* Espacement interne de 20px */
+    padding: 20px;
+    /* Positionnement relatif */
+    position: relative;
+    /* Alignement en bas de la page */
+    bottom: 0;
+    /* Largeur à 100% de son conteneur */
+    width: 100%;
+    /* Utilisation de flexbox pour l'agencement */
+    display: flex;
+    /* Répartition de l'espace entre les éléments */
+    justify-content: space-between;
+    /* Alignement vertical au centre */
+    align-items: center;
+}
+
+/* Styles pour le paragraphe dans le pied de page */
+footer p {
+    /* Suppression de la marge */
+    margin: 0;
+    /* Taille de police de 1.2rem */
+    font-size: 1.2rem;
+    /* Poids de police normal */
+    font-weight: 400;
+}
+
+footer p a{
+    
+    color: #fff;
+}
+
+/* Style du conteneur des icônes sociales */
+.social-icons {
+    /* Utilise flexbox pour aligner les icônes horizontalement */
+    display: flex;
+    /* Ajoute un espace de 15px entre chaque icône */
+    gap: 15px;
+}
+
+/* Style des liens contenant les icônes */
+.social-icons a {
+    /* Utilise flexbox pour centrer l'icône dans le lien */
+    display: flex;
+    /* Centre horizontalement l'icône dans le lien */
+    justify-content: center;
+    /* Centre verticalement l'icône dans le lien */
+    align-items: center;
+    /* Définit la largeur du lien à 40px */
+    width: 40px;
+    /* Définit la hauteur du lien à 40px */
+    height: 40px;
+    /* Rend le lien circulaire */
+    border-radius: 50%;
+    /* Définit la couleur du texte (icône) en blanc */
+    color: white;
+    /* Supprime le soulignement par défaut des liens */
+    text-decoration: none;
+    /* Ajoute une transition douce pour tous les changements */
+    transition: all 0.3s ease;
+    /* Permet le positionnement absolu du pseudo-élément */
+    position: relative;
+}
+
+/* Crée un pseudo-élément pour le contour blanc */
+.social-icons a::before {
+    /* Nécessaire pour que le pseudo-élément apparaisse */
+    content: '';
+    /* Positionne le pseudo-élément par rapport au lien */
+    position: absolute;
+    /* Positionne le haut du contour 2px au-dessus du lien */
+    top: -2px;
+    /* Positionne le côté gauche du contour 2px à gauche du lien */
+    left: -2px;
+    /* Positionne le côté droit du contour 2px à droite du lien */
+    right: -2px;
+    /* Positionne le bas du contour 2px en dessous du lien */
+    bottom: -2px;
+    /* Rend le contour circulaire */
+    border-radius: 50%;
+    /* Crée une bordure blanche de 2px */
+    border: 2px solid white;
+    /* Ajoute une transition douce pour l'effet de survol */
+    transition: all 0.3s ease;
+}
+
+/* Effet de survol sur le contour */
+.social-icons a:hover::before {
+    /* Agrandit le contour de 20% au survol */
+    transform: scale(1.2);
+}
+
+/* Style des icônes elles-mêmes */
+.social-icons i {
+    /* Définit la taille de police des icônes à 18px */
+    font-size: 18px;
+}
+/* Styles au survol des icônes sociales */
+.social-icons a:hover {
+    /* Changement de couleur au survol */
+    color: #3498db;
+}
+/************* Styles pour le pied de page contenant un texte et des icônes de réseaux sociaux **************/
+
+
+
+/*************** Règles de styles pour les écrans de largeur maximale de 768px pour le pied de page ***************/
+@media (max-width: 768px) {
+    /* Modifications du style du pied de page pour les petits écrans */
+    footer {
+        /* Changement de la direction du flex en colonne */
+        flex-direction: column;
+        /* Centrage du texte */
+        text-align: center;
+    }
+    /* Ajustement de la marge du paragraphe dans le pied de page */
+    footer p {
+        /* Ajout d'une marge en bas de 10px */
+        margin-bottom: 10px;
+    }
+    /* Ajustement de la marge des icônes sociales */
+    .social-icons a {
+        /* Réduction de la marge gauche à 10px */
+        margin-left: 10px;
+    }
+    /* Modification de la largeur des contrôles du carrousel */
+    .carousel-control-prev, .carousel-control-next {
+        /* Largeur fixée à 10% */
+        width: 10%;
+    }
+    /* Ajustement de la taille des icônes de contrôle du carrousel */
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        /* Largeur fixée à 20px */
+        width: 20px;
+        /* Hauteur fixée à 20px */
+        height: 20px;
+    }
+}
+/*************** Règles de styles pour les écrans de largeur maximale de 768px pour le pied de page ***************/
+
+
+/************************ Style pour le bouton remonter en haut de la page.  ************************************/
+
+#scrollToTopBtn{
+    /* Bouton cahé par défaut */
+    display: none;
+    /* Posisionnement fixe lors du défilement de la page */
+    position: fixed;
+    /* Placement en bas du bouton */
+    bottom: 90px;
+    /* Placement à droite de la page */
+    right: 30px;
+    /* Placement au-dessus des autres éléments */
+    z-index: 99;
+    /* Pas de bordure pour le bouton */
+    border: none;
+    /* Pas de contour pour le bouton */
+    outline: none;
+    /* Couleur de fond */
+    background-color: #34495e;
+    /* Couleur de la fléche */
+    color: #f1f1f1;
+    /* Mettre une petite main comme cureur */
+    cursor: pointer;
+    /* Marge interne pour le bouton (padding) */
+    padding: 15px;
+    /* Arrondir les coins du bouton */
+    border-radius: 10px;
+    /* Taille de police pour la fléche */
+    font-size: 20px;
+    /* Ombre portée du bouton */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Transition pour le fond et sa transformation (agrandissement du bouton) */
+    transition: background-color 0.3 ease, transform 0.3s ease;
+    
+ }
+ 
+ /* Styles du bouton au survol */
+ #scrollToTopBtn:hover{
+     /* Couleur de fond au survol */
+     background-color: #ffe033;
+     /* Agrandissement au survol */
+     transform: scale(1.1);
+     /* Agrandissement de la taille de l'ombre portée au survol */
+     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+     /* Couleur de l'icône au survol */
+     color: #454d55;
+     
+ }
+
+/************************ Style pour le bouton remonter en haut de la page.  ************************************/
+
+
+
+/**************************** Styles pour passer la page en mode sombre  *********************************/
+/* Style du corps de la page en mode sombre */
+body.dark-mode {
+    /* Définit la couleur de fond en gris foncé */
+    background-color: #343a40;
+    /* Définit la couleur du texte en blanc pour un bon contraste */
+    color: #ffffff;
+}
+
+/* Style des titres h2 et h3 en mode sombre */
+body.dark-mode h2,
+body.dark-mode h3 {
+    /* Assure que les titres sont blancs pour un contraste élevé */
+    color: #ffffff;
+}
+
+
+/* Style des labels de formulaire en mode sombre */
+body.dark-mode label {
+    /* Définit la couleur des labels en noir */
+    color: #000;
+}
+
+/* Style de la barre de navigation en mode sombre */
+.navbar.navbar-light.bg-light.dark-mode {
+    /* Force la couleur de fond de la navbar en gris très foncé */
+    background-color: #212529 !important;
+    /* Définit la couleur du texte de la navbar en blanc */
+    color: #ffffff;
+}
+
+/* Style des liens de navigation en mode sombre */
+.navbar.navbar-light.bg-light.dark-mode .nav-link,
+.navbar.navbar-light.bg-light.dark-mode .nav-link.dropdown-toggle {
+    /* Force la couleur des liens de navigation en blanc */
+    color: #ffffff !important;
+}
+
+/* Style du lien actif dans la navigation en mode sombre */
+.navbar.navbar-light.bg-light.dark-mode .nav-link.active {
+    /* Définit la couleur du lien actif en rouge */
+    color: #e74c3c !important;
+}
+
+/* Effet de survol pour les liens en mode sombre */
+.navbar.navbar-light.bg-light.dark-mode .nav-link:hover,
+.navbar.navbar-light.bg-light.dark-mode .nav-link.dropdown-toggle:hover {
+    /* Change la couleur des liens au survol en gris très clair */
+    color: #e74c3c !important;
+}
+
+/* Style du menu déroulant en mode sombre */
+.navbar.navbar-light.bg-light.dark-mode .dropdown-menu {
+    /* Définit la couleur de fond du menu déroulant en gris foncé */
+    background-color: #343a40;
+    /* Définit la couleur de la bordure du menu déroulant */
+    border-color: #454d55;
+}
+
+/* Style des éléments du menu déroulant en mode sombre */
+.navbar.navbar-light.bg-light.dark-mode .dropdown-item {
+    /* Définit la couleur du texte des éléments du menu déroulant en blanc */
+    color: #ffffff;
+}
+
+/* Effet de survol et focus pour les éléments du menu déroulant en mode sombre */
+.navbar.navbar-light.bg-light.dark-mode .dropdown-item:hover,
+.navbar.navbar-light.bg-light.dark-mode .dropdown-item:focus {
+    /* Change la couleur de fond au survol/focus */
+    background-color: #e74c3c !important;
+    /* Maintient la couleur du texte en blanc au survol/focus */
+    color: #ffffff;
+}
+
+/* Style de l'icône du bouton toggler en mode sombre */
+.navbar.navbar-light.bg-light.dark-mode .navbar-toggler-icon {
+    /* Définit l'image de fond de l'icône du toggler en blanc */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Style des liens en mode sombre pour le corps et le pied de page */
+body.dark-mode a, footer.dark-mode a {
+    /* Définit la couleur des liens en blanc */
+    color: #ffffff;
+}
+
+/* Effet de survol pour les liens en mode sombre */
+body.dark-mode a:hover, footer.dark-mode a:hover {
+    /* Change la couleur des liens au survol en bleu clair */
+    color: #3498db;
+}
+
+/* Style du pied de page en mode sombre */
+footer.dark-mode {
+    /* Définit la couleur de fond du pied de page en gris très foncé */
+    background-color: #212529;
+    /* Définit la couleur du texte du pied de page en blanc */
+    color: #ffffff;
+}
+/**************************** Styles pour passer la page en mode sombre  *********************************/
+
+
+/*************** CSS pour styliser la barre de défilement dans la page  *******************/
+
+/* Personnalisation de la largeur de la barre de défilement */
+::-webkit-scrollbar {
+    width: 11px; /* Largeur de la barre verticale */
+    height: 11px; /* Hauteur de la barre horizontale */
+}
+
+/* Couleur de l'arrière-plan de la barre de défilement */
+::-webkit-scrollbar-track {
+    background-color: #e74c3c; /* Couleur de la piste */
+}
+
+/* Couleur et style de la partie glissante de la barre de défilement */
+::-webkit-scrollbar-thumb {
+    background-color: #344995; /* Couleur du curseur */
+    border-radius: 10px; /* Arrondir le curseur */
+    border: 3px solid #f1f1f1; /* Espacement autour du curseur */
+}
+
+/* Couleur de la partie glissante au survol */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #e74c3c; /* Couleur du curseur au survol */
+}
+
+/*************** CSS pour styliser la barre de défilement dans la page  *******************/

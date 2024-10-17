@@ -1,0 +1,361 @@
+<!-- Déclaration du type de document HTML5 -->
+<!DOCTYPE html>
+<!-- Balise HTML avec attribut de langue, le français 'fr' -->
+<html lang="fr">
+
+<!-- Début de la section head -->
+<head>
+  
+    <!-- Déclaration du jeu de caractères -->
+    <meta charset="UTF-8">
+    
+    <!-- Paramètre de vue pour la responsivité -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Description meta optimisée pour les moteurs de recherche -->
+    <meta name="description" content="Page d'évaluation Bootstrap 5.3.3 avec barre de navigation responsive, carrousel d'images, formulaire multi-étapes, carte Google Maps intégrée et footer avec icônes sociales.">
+    
+    <!-- Auteur de la page -->
+    <meta name="author" content="Nom de l'auteur ou organisation">
+    
+    <!-- Mots-clés pour améliorer la recherche (facultatif mais utile pour certains moteurs de recherche) -->
+    <meta name="keywords" content="Bootstrap 5.3.3, carrousel, formulaire multi-étapes, carte Google Maps, icônes sociales, développement web, responsive, évaluation">
+  
+    <!-- Indication pour les moteurs de recherche de suivre les liens et d'indexer la page -->
+    <meta name="robots" content="index, follow">
+  
+    <!-- Balises Open Graph pour l'aperçu sur les réseaux sociaux -->
+    <meta property="og:title" content="Évaluation Bootstrap 5.3.3 | Page Web Responsive">
+    <meta property="og:description" content="Découvrez cette évaluation Bootstrap 5.3.3 avec une barre de navigation fixe, un carrousel automatique et un formulaire multi-étapes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-site.com/evaluation-bootstrap">
+    <meta property="og:image" content="https://votre-site.com/images/og-image.jpg">
+    
+    <!-- Twitter Card pour un meilleur aperçu sur Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Évaluation Bootstrap 5.3.3 | Page Web Responsive">
+    <meta name="twitter:description" content="Découvrez cette évaluation Bootstrap 5.3.3 avec un carrousel d'images, un formulaire multi-étapes et un footer élégant.">
+    <meta name="twitter:image" content="https://votre-site.com/images/twitter-image.jpg">
+    
+    <!-- Lien canonique pour éviter le contenu dupliqué -->
+    <link rel="canonical" href="https://votre-site.com/evaluation-bootstrap">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo22.png" type="image/x-icon">
+    
+    <!-- Lien vers Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Lien vers FontAwesome pour les icônes des réseaux sociaux -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+    <!-- Titre pertinent et optimisé pour les moteurs de recherche -->
+    <title>ECF Bootstrap 5.3.3 | Développement web responsive</title>
+    
+    <!-- Lien vers le fichier CSS personnalisé -->
+    <link rel="stylesheet" href="css/styles.css">
+
+  </head>
+  
+
+<body>
+ 
+<!--**** Début de la barre de navigation Bootstrap 5.3.3 avec classe pour la couleur et la position fixe en haut ****-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <!-- Conteneur fluide pour le contenu de la barre de navigation -->
+  <div class="container-fluid">
+    <!-- Lien du logo avec badge de notification -->
+    <a class="navbar-brand" href="index.html">
+      <!-- Image du logo avec classes pour le style -->
+      <img src="images/logo2.png" alt="Logo de l'entreprise" class="img-fluid me-2 img-zoom"> <span class="badge badge-circle" style="background-color: #e74c3c !important;" title="Vous avez 3 nouvelles notifications">3</span>
+    </a>
+    <!-- Bouton pour le menu hamburger sur les petits écrans -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Icône du bouton hamburger -->
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Contenu du menu de navigation collapsible -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Liste non ordonnée pour les éléments du menu -->
+      <ul class="navbar-nav ms-auto">
+        <!-- Élément de menu pour l'accueil -->
+        <li class="nav-item">
+          <!-- Lien actif pour la page d'accueil -->
+          <a class="nav-link active" href="index.html">Accueil</a>
+        </li>
+        <!-- Élément de menu pour les services -->
+        <li class="nav-item">
+          <!-- Lien vers la page des services -->
+          <a class="nav-link" href="#">Nos services</a>
+        </li>
+        <!-- Élément de menu déroulant -->
+        <li class="nav-item dropdown">
+          <!-- Lien déclencheur du menu déroulant -->
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nos actions
+          </a>
+          <!-- Liste des éléments du menu déroulant -->
+          <!-- Début de la liste déroulante -->
+          <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="navbarDropdown">
+            <!-- Premier élément de la liste -->
+            <li><a class="dropdown-item custom-dropdown-item" href="#">Notre mission</a></li>
+            <!-- Deuxième élément de la liste -->
+            <li><a class="dropdown-item custom-dropdown-item" href="#">Notre collectif</a></li>
+            <!-- Troisième élément de la liste -->
+            <li><a class="dropdown-item custom-dropdown-item" href="#">Nos programmes</a></li>
+          </ul>
+          <!-- Fin de la liste déroulante -->
+        </li>
+        <!-- Élément de menu pour le blog -->
+        <li class="nav-item">
+          <!-- Lien vers la page du blog -->
+          <a class="nav-link" href="#">Notre blog</a>
+        </li>
+        <!-- Élément de menu pour le contact -->
+        <li class="nav-item">
+          <!-- Lien vers la page de contact -->
+          <a class="nav-link" href="#contact">Contactez-nous</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="theme-toggler">
+            <i class="fas fa-moon"></i> Sombre
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--***** Fin de la barre de navigation Bootstrap 5.3.3 avec classe pour la couleur et la position fixe en haut *****-->
+
+
+
+
+<!--******************** Début du conteneur principal du carousel ***********************-->
+<div id="carouselExampleCaptions" class="carousel slide mt-5" data-bs-ride="carousel">
+  <!-- Indicateurs de navigation du carousel -->
+  <div class="carousel-indicators">
+    <!-- Bouton pour la première diapositive (active par défaut) -->
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <!-- Bouton pour la deuxième diapositive -->
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <!-- Bouton pour la troisième diapositive -->
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <!-- Bouton pour la quatrième diapositive -->
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <!-- Conteneur des diapositives du carousel -->
+  <div class="carousel-inner">
+    <!-- Première diapositive (active par défaut) -->
+    <div class="carousel-item active">
+      <!-- Image de la première diapositive -->
+      <img src="images/slide1.jpg" class="d-block w-100" alt="Slide 1">
+      <!-- Légende de la première diapositive -->
+      <div class="carousel-caption">
+        <!-- Titre de la légende -->
+        <h5>Éthique</h5>
+        <!-- Texte de la légende -->
+        <p>L'intelligence artificielle ne se limite pas à des tâches analytiques.</p>
+        <!-- Bouton "En savoir plus" -->
+        <a href="#" class="btn btn-primary">En savoir plus</a>
+      </div>
+    </div>
+    <!-- Deuxième diapositive -->
+    <div class="carousel-item">
+      <!-- Image de la deuxième diapositive -->
+      <img src="images/slide2.jpg" class="d-block w-100" alt="Slide 2">
+      <!-- Légende de la deuxième diapositive -->
+      <div class="carousel-caption">
+        <!-- Titre de la légende -->
+        <h5>IA et santé</h5>
+        <!-- Texte de la légende -->
+        <p>L'intelligence artificielle ne se limite pas à des tâches analytiques.</p>
+        <!-- Bouton "En savoir plus" -->
+        <a href="#" class="btn btn-primary">En savoir plus</a>
+      </div>
+    </div>
+    <!-- Troisième diapositive -->
+    <div class="carousel-item">
+      <!-- Image de la troisième diapositive -->
+      <img src="images/slide3.jpg" class="d-block w-100" alt="Slide 3">
+      <!-- Légende de la troisième diapositive -->
+      <div class="carousel-caption">
+        <!-- Titre de la légende -->
+        <h5>Automatisation</h5>
+        <!-- Texte de la légende -->
+        <p>L'intelligence artificielle ne se limite pas à des tâches analytiques.</p>
+        <!-- Bouton "En savoir plus" -->
+        <a href="#" class="btn btn-primary">En savoir plus</a>
+      </div>
+    </div>
+    <!-- Quatrième diapositive -->
+    <div class="carousel-item">
+      <!-- Image de la quatrième diapositive -->
+      <img src="images/slide4.jpg" class="d-block w-100" alt="Slide 4">
+      <!-- Légende de la quatrième diapositive -->
+      <div class="carousel-caption">
+        <!-- Titre de la légende -->
+        <h5>IA et Créativité</h5>
+        <!-- Texte de la légende -->
+        <p>L'intelligence artificielle ne se limite pas à des tâches analytiques.</p>
+        <!-- Bouton "En savoir plus" -->
+        <a href="#" class="btn btn-primary">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+  <!-- Bouton de navigation vers la diapositive précédente -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <!-- Icône du bouton précédent -->
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <!-- Texte caché pour l'accessibilité -->
+    <span class="visually-hidden">Précédent</span>
+  </button>
+  <!-- Bouton de navigation vers la diapositive suivante -->
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <!-- Icône du bouton suivant -->
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <!-- Texte caché pour l'accessibilité -->
+    <span class="visually-hidden">Suivant</span>
+  </button>
+</div>
+<!--******************** Fin du conteneur principal du carousel ***********************-->
+
+
+
+<!--************** Début du conteneur principal avec marge supérieure de 48px ***************-->
+<div class="container mt-5" id="contact">
+  <!-- Ligne pour organiser le contenu en colonnes -->
+  <div class="row">
+    <!-- Colonne pour le formulaire de contact (occupe la moitié de la largeur sur les écrans moyens et grands) -->
+    <div class="col-md-6">
+      
+      <!-- Formulaire multi-étapes -->
+      <form id="multiStepForm" class="needs-validation" novalidate role="form" aria-label="Formulaire d'inscription">
+        <!-- Titre du formulaire -->
+        <h2 class="text-center">Formulaire de contact</h2>
+        <!-- Première étape du formulaire -->
+        <div class="step">
+          <!-- Groupe pour le champ Nom -->
+          <div class="mb-3">
+            <label for="name" class="form-label">Nom : <span style="color: red;">*</span></label>
+            <input type="text" class="form-control" id="name" required aria-required="true" aria-describedby="prenomHelp">
+            <div class="invalid-feedback" role="alert">
+              Veuillez fournir un nom valide
+           </div>
+          </div>
+          <!-- Groupe pour le champ Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Adresse mail : <span style="color: red;">*</span></label>
+            <input type="email" class="form-control" id="email" required aria-required="true" aria-describedby="emailHelp">
+            <div class="invalid-feedback" role="alert">
+              Veuillez fournir une adresse mail valide
+           </div>
+          </div>
+          <!-- Bouton pour passer à l'étape suivante -->
+          <button type="button" class="btn btn-primary next-step">Suivant</button>
+        </div>
+        <!-- Deuxième étape du formulaire (initialement cachée) -->
+        <div class="step d-none">
+          <!-- Groupe pour le champ Sujet -->
+          <div class="mb-3">
+            <label for="subject" class="form-label">
+              Sujet: <span style="color: red;">*</span>
+            </label>
+            <input type="text" class="form-control" id="subject" required aria-required="true" aria-describedby="subjectlHelp">
+            <div class="invalid-feedback" role="alert">
+              Veuillez fournir un sujet
+           </div>
+          </div>
+          <!-- Groupe pour le champ Message -->
+          <div class="mb-3">
+            <label for="message" class="form-label">
+              Message: <span style="color: red;">*</span>
+            </label>
+            <textarea class="form-control" id="message" rows="3" required aria-required="true" aria-describedby="messagelHelp"></textarea>
+            <div class="invalid-feedback" role="alert">
+              Veuillez rédiger votre message :) 
+           </div>
+          </div>
+          <!-- Bouton pour revenir à l'étape précédente -->
+          <button type="button" class="btn btn-secondary prev-step">Précédent</button>
+          <!-- Bouton pour soumettre le formulaire -->
+          <button type="submit" class="btn btn-success">Envoyer</button>
+        </div>
+      </form>
+      <div class="col-md-12">
+        <div class="contact-info-box">
+            <h3>Contactez-nous</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 
+              55 Avenue du 4 Septembre, 83300 Draguignan, France</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:contact@abeona.com" style="color: #fff;">contact@abeona.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:0640510208" style="color: #fff;">06 40 51 02 08</a></p>
+        </div>
+    </div>
+    
+    </div>
+    <!-- Colonne pour le formulaire de contact (occupe la moitié de la largeur sur les écrans moyens et grands) -->
+
+    <!-- Colonne pour la carte Google Maps (occupe l'autre moitié de la largeur) -->
+    <div class="col-md-6 carte-map">
+      <!-- Titre de la section carte -->
+      <h2 class="text-center">Notre emplacement</h2>
+      <!-- Conteneur pour la carte intégrée -->
+      <div id="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.3820334962024!2d6.4570668756931955!3d43.536077759998776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ceab8614d20f31%3A0xfa48ff1dbcf8661b!2s55%20Av.%20du%204%20Septembre%2C%2083300%20Draguignan!5e0!3m2!1sfr!2sfr!4v1727937673327!5m2!1sfr!2sfr"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Carte d'emplacement"
+          sandbox="allow-scripts allow-same-origin allow-popups"
+        ></iframe>
+        <noscript>
+          <p>Carte montrant l'emplacement de notre entreprise au 55 Avenue du 4 Septembre, 83300 Draguignan, France.</p>
+        </noscript>
+      </div>
+    </div>
+    <!-- Colonne pour la carte Google Maps (occupe l'autre moitié de la largeur) -->
+
+  </div>
+</div>
+<!--************** Fin du conteneur principal avec marge supérieure de 48px ***************-->
+
+
+
+<!-- Pied de page avec texte et icônes de réseaux sociaux -->
+<footer class="mt-2">
+  <!-- Texte du pied de page à gauche -->
+  <p>&copy; <a href="https://www.fondation-abeona.org/fr/news/ai-society-institute/" target="_blank">Fondation Abeona - 2024</a> | Tous droits réservés</p>
+  <!-- Conteneur pour les icônes de réseaux sociaux à droite -->
+  <div class="social-icons">
+    <!-- Lien vers Facebook avec icône -->
+    <a href="#" aria-label="Lien facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <!-- Lien vers Twitter avec icône -->
+    <a href="#" aria-label="Lien twitter" title="Twitter X"><i class="fab fa-twitter"></i></a>
+    <!-- Lien vers Instagram avec icône -->
+    <a href="#" aria-label="Lien instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <!-- Lien vers LinkedIn avec icône -->
+    <a href="#" aria-label="Lien linkedin" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+    <!-- Lien vers YouTube avec icône -->
+    <a href="#" aria-label="Lien youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+</footer>
+<!-- Pied de page avec texte et icônes de réseaux sociaux -->
+
+<!-- Bouton pour remonter en haut -->
+<button id="scrollToTopBtn" title="Cliquez ici pour revenir en haut"><i class="fas fa-satellite"></i></button>
+<!-- Bouton pour remonter en haut -->
+
+
+<!-- Inclusion du script JavaScript de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Inclusion du script JavaScript personnalisé -->
+<script src="js/script.js"></script>
+
+<!-- Fermeture de la balise body -->
+</body>
+<!-- Fermeture de la balise html -->
+</html>
